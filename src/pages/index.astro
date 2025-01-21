@@ -1,0 +1,356 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'ZDev',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Konsultasi',
+        href: 'https://api.whatsapp.com/send/?phone=6285198185903&text=Halo+%5BNama+Penerima%5D%2C+Saya+%5BNama+Anda%5D+dari+%5BNama+Perusahaan%2FUsaha+Anda%5D.+Saya+tertarik+untuk+membuat+website+profesional.+Bisakah+kita+diskusi+lebih+lanjut+tentang+kebutuhan%2C+desain%2C+dan+fitur+yang+saya+butuhkan%3F+Terima+kasih%21&type=phone_number&app_absent=0',
+        target: '_blank',
+        icon: 'tabler:messages',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'ZDeveloper' }}
+  >
+    <Fragment slot="title">
+       Buat Website Keren Bisnis Anda Bersama
+      <span class="text-[#62B9D2] highlight"> Z Dev</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+
+        Cocok untuk Startup, UMKM, Bisnis Kecil, Website SaaS, Portofolio Profesional, Website Marketing, Landing Page, Blog, hingga Bisnis Crypto!
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="About"
+    tagline="Z Developer"
+    title="Kenapa Harus Memilih Kami?"
+    subtitle=" Z Developer siap membantu Anda menciptakan website yang menarik, fungsional, dan mudah dikelola. Percayakan proyek website Anda pada Z Developer dan rasakan pengalaman pembuatan website yang memuaskan."
+    items={[
+      {
+        title: 'Modern Design',
+        description:
+          'Dengan sentuhan desain modern, Z Developer menciptakan solusi yang menawarkan design menarik, unik, dan fleksibilitas luar biasa.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Website Siap Digunakan',
+        description:
+          'Website yang kami siap digunakan untuk Marketing Websites, SaaS, Blogs, Personal Profiles, UMKM untuk di promosikan di kancah dunia.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Aman',
+        description:
+          'Membangun website yang aman, efisien, dan ramah pengguna untuk memberikan pengalaman luar biasa dan nilai jangka panjang.',
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'Performa Tinggi',
+        description:
+          'Dengan performa tinggi, Z Developer memastikan website Anda tidak hanya cepat dimuat, tetapi juga memberikan pengalaman pengguna yang optimal dan mendorong hasil bisnis yang lebih baik.',
+        icon: 'tabler:jetpack',
+      },
+      {
+        title: 'Search Engine Optimization (SEO)',
+        description:
+          "Z Developer hadir dengan solusi SEO terbaik yang meningkatkan visibilitas website Anda, mendorong trafik organik, dan memperluas jangkauan audiens.",
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Terbuka Untuk Usaha Kecil',
+        description:
+          'Z Developer hadir dengan semangat terbuka untuk usaha kecil, memberikan solusi yang fleksibel dan inovatif untuk membantu bisnis Anda tumbuh.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  id='Portfolio'
+    isReversed
+    tagline="Portfolio"
+    title="Proyek yang pernah kami kerjakan"
+    items={[
+      {
+        title: 'Design Minimalis',
+        description:
+          'Design yang minimalis membuat konsumen dapat memahami apa yang penjual coba ungkapkan.',
+      },
+      {
+        title: 'Proposional Layouting',
+        description:
+          'Proportional layouting adalah teknik desain yang memastikan elemen-elemen pada website atau aplikasi memiliki ukuran dan posisi yang seimbang dan proporsional.',
+      },
+      {
+        title: 'Responsive Design',
+        description:
+          'Design dapat menyesuaikan ketika dilihat dari beberapa ukurann layar.',
+      },
+    ]}
+    image={{
+      src: 'https://res.cloudinary.com/dke0bmtls/image/upload/v1737473601/zdev/vmnwcqj3rtq5vpukpyp9.png',
+      alt: 'Colorful Web',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Beberapa Proyek Yang Kami Handle</h3>
+      Proyek dengan kualitas tinggi siap bersaing di kancah internasional
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  
+    isAfterContent
+    items={[
+      {
+        title: 'Modern Design',
+        description: `Desain yang modern membuat konsumen tertarik dan betah mengunjungi website anda.`,
+      },
+      {
+        title: 'Dibuat Dengan Next Js',
+        description:
+          'Next Js merupakan framework yang cepat sehinga akan menghasilkan website dengan performa yang tinggi',
+      },
+      {
+        title: 'Animasi yang menarik',
+        description:
+          "Animasi yang menarik membuat website anda elegan sehinga membuat konsumen anda terkesan",
+      },
+      {
+        title: 'Terintergrasi Dengan Media',
+        description:
+          'Website yang terintegrasi dengan media seperti whatshapp memudahkan konsumen untuk menghubungi anda',
+      },
+    ]}
+    image={{
+      src: 'https://res.cloudinary.com/dke0bmtls/image/upload/v1737474209/zdev/bacn4fjkdglppi6clzwf.png',
+      alt: 'Busines Web',
+    }}
+  >
+    <Fragment slot="content">Traveler Web: Web Trip Wisata Tulungagung</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Meningkatkan Personal Branding',
+        description:
+          'Selain web bisnis kami juga bisa melayani anda dalam pembuatan personal website',
+      },
+      {
+        title: 'Menambah Kepercayaan',
+        description:
+          'Jika anda memiliki personal website maka nama anda akan mudah di cari di internet',
+      },
+      {
+        title: 'Efisiensi waktu dan sumber daya',
+        description:
+          'Lewati proses yang memakan waktu dalam membangun situs web dari awal dan luncurkan kehadiran online Anda lebih cepat dengan ZDev',
+      },
+
+    ]}
+    image={{
+      src: 'https://res.cloudinary.com/dke0bmtls/image/upload/v1737474642/zdev/ifgvsidimnyunv6vvlfc.png',
+      alt: 'Personal Web',
+    }}
+  >
+    <Fragment slot="content">Personal Website</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+  id='Pengerjaan'
+    title="Alur Proses Pengerjaan Kami"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Diskusi Konsep</span>',
+        description:
+          "Petama tama kami akan mengkomunikasikan konsep, tujuan, keinginan klien serta informasi yang lebih spesifik tentang tujuan mereka",
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Pengerjaan</span>',
+        description:
+          "Setelah konsep disetujui kami melakukan produksi dengan tim ahli kami untuk mewujudkan keinginan klien",
+        icon: 'tabler:settings-search',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Penyerahan & Deployment</span>',
+        description:
+          'Setelah produksi kami akan menyerahkan file dan mempublish website ke publik',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Selesai!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://res.cloudinary.com/dke0bmtls/image/upload/v1737475588/zdev/uerqsf19d5sd8vdn2lwm.jpg',
+      alt: 'Time image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Layanan Kami Untuk Meningkatkan Bisnis Anda"
+    subtitle="Dedikasi penuh kami untuk membantu anda dalam membawa bisnis anda ke era Go Digital"
+    tagline="Service"
+    items={[
+      {
+        title: 'Landing Page',
+        description: "Landing page adalah halaman website yang dirancang khusus untuk tujuan tertentu, seperti mengkonversi pengunjung menjadi pelanggan, mengumpulkan leads, atau mempromosikan produk/layanan.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'UI UX Design',
+        description:
+          " Bersama-sama, UI/UX Design menciptakan solusi yang estetis dan efektif untuk kebutuhan pengguna.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Graphic Design',
+        description:
+          'Kami menawarkan jasa membuat logo, design poster, baner dan sejenisnya',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Web Development',
+        description:
+          "Z Developer menyediakan layanan web development profesional yang dirancang untuk membangun website berkualitas tinggi, responsif, dan sesuai kebutuhan bisnis Anda. Dengan tim ahli dan teknologi terkini,",
+        icon: 'flat-color-icons:document',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Jawaban pertanyaan berikut untuk memperoleh wawasan mengenai fitur-fitur hebat yang ditawarkan Z Developer dan bagaimana fitur ini dapat meningkatkan perjalanan pengembangan bisnis anda."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+       {
+        title: 'Berapa biaya untuk layanan pembuatan website atau desain grafis?',
+        description:
+          "Biaya bervariasi tergantung kebutuhan proyek. Kami menawarkan paket custom yang disesuaikan dengan anggaran dan tujuan bisnis Anda. Hubungi kami untuk konsultasi gratis dan penawaran harga yang transparan!",
+      },
+      {
+        title: 'Apa saja layanan yang ditawarkan Z Developer?',
+        description:
+          "Z Developer menyediakan layanan lengkap meliputi pembuatan website, desain grafis (logo, banner, brosur), dan desain UI/UX untuk aplikasi atau website. Kami juga menawarkan optimasi SEO dan maintenance website.",
+      },
+      {
+        title: 'Berapa lama proses pengerjaan sebuah website atau desain?',
+        description:
+          'Waktu pengerjaan bervariasi tergantung kompleksitas proyek. Untuk landing page, biasanya memakan waktu 2-7 hari, sedangkan desain grafis atau UI/UX dapat diselesaikan dalam 1-2 minggu. Kami selalu berusaha memberikan hasil terbaik tanpa mengorbankan kualitas.',
+      },
+      {
+        title: 'Apakah website yang dibuat responsif dan mobile-friendly?',
+        description: "Tentu! Semua website yang kami buat dirancang responsif, artinya tampilan akan menyesuaikan dengan berbagai perangkat, termasuk desktop, tablet, dan smartphone, untuk pengalaman pengguna yang optimal.",
+      },
+      {
+        title: "Bagaimana dengan revisi desain?",
+        description:
+          "Kami menyediakan revisi desain hingga 3 kali untuk memastikan hasil sesuai dengan ekspektasi Anda. Tim kami akan bekerja sama dengan Anda hingga Anda puas dengan hasilnya.",
+      },
+      {
+        title: 'Apakah Z Developer menyediakan layanan maintenance setelah website selesai?',
+        description:
+          "Ya, kami menawarkan layanan maintenance berkala, termasuk update konten, backup data, dan perbaikan teknis, untuk memastikan website Anda selalu berjalan lancar.",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Proyek', amount: '10+' },
+      { title: 'Layanan', amount: '3+' },
+      { title: 'Client', amount: '10+' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+  id='Kontak'
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Kontak',
+        href: 'https://api.whatsapp.com/send/?phone=6285198185903&text=Halo+%5BNama+Penerima%5D%2C+Saya+%5BNama+Anda%5D+dari+%5BNama+Perusahaan%2FUsaha+Anda%5D.+Saya+tertarik+untuk+membuat+website+profesional.+Bisakah+kita+diskusi+lebih+lanjut+tentang+kebutuhan%2C+desain%2C+dan+fitur+yang+saya+butuhkan%3F+Terima+kasih%21&type=phone_number&app_absent=0',
+        target: '_blank',
+        icon: 'tabler:messages',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+     Z Developer
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Dengan Z Developer, Anda mendapatkan solusi lengkap untuk kebutuhan web, desain grafis, dan UI/UX yang profesional dan terpercaya. 🚀✨
+    </Fragment>
+  </CallToAction>
+</Layout>
