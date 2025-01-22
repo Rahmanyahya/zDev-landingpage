@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: 0;
+}
+
+body {
+  scrollbar-width: 0;
+}
+
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page);
